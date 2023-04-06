@@ -1,28 +1,3 @@
-// //* fonts
-// @mixin font($font_name, $file_name, $weight, $style) {
-//   @font-face {
-//     font-family: $font_name;
-//     font-display: swap;
-//     src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
-//     font-weight: #{$weight};
-//     font-style: #{$style};
-//}
-// //@include font("Inter", "Inter-Light", "300", "normal");
-
-// //* responsive font size
-// $maxWidth: 1440;
-// $minWidth: 575;
-
-// //@include adaptive-font(44, 26); - вказуємо максимальний і мінімальний розмір шрифту
-
-// @mixin adaptive-font($pcSize, $mobSize) {
-//   $addSize: $pcSize - $mobSize;
-//   $maxWidth: $maxWidth - $minWidth;
-//   font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - #{$minWidth + px}) / #{$maxWidth}));
-// }
-
-//******/
-
 //* media
 $minphoneMax: 319px;
 $minphoneMin: 320px;
@@ -63,10 +38,6 @@ $desktopMin: 1200px;
   }
 }
 
-/**
-//* Tablet
-*/
-
 @mixin maxW-Tablet {
   @media screen and (max-width: $tabletMax) {
     @content;
@@ -78,10 +49,6 @@ $desktopMin: 1200px;
     @content;
   }
 }
-
-/**
-//* Desctop
-*/
 
 @mixin maxW-Dt {
   @media screen and (max-width: $desktopMax) {
@@ -102,19 +69,3 @@ $desktopMin: 1200px;
     @content;
   }
 }
-
-/**
-//* Castom media
-// */
-
-// @mixin minW($widthValue) {
-//   @media screen and (min-width: $widthValue) {
-//     @content;
-//   }
-// }
-
-// @mixin maxW($widthValue) {
-//   @media screen and (max-width: $widthValue) {
-//     @content;
-//   }
-// }
